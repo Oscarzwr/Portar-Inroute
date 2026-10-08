@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Portal Inroute</title>
- <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
+
     :root {
       --forest: #063d31;
       --forest-dark: #052d25;
@@ -16,6 +19,7 @@
       --muted: #727d79;
       --line: #dfe6e3;
       --page: #eef5f2;
+      --white: #ffffff;
     }
 
     * {
@@ -24,6 +28,23 @@
 
     body {
       margin: 0;
+      min-height: 100vh;
+
+      background: var(--page);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--ink);
+    }
+
+    /* =====================================================
+       LOGIN
+    ===================================================== */
+
+    #loginPage {
       min-height: 100vh;
       padding: 32px;
 
@@ -37,16 +58,7 @@
           transparent 28%
         ),
         var(--page);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      color: var(--ink);
     }
-
-    /* CONTENEDOR PRINCIPAL */
 
     .shell {
       width: min(1180px, 100%);
@@ -84,8 +96,6 @@
       color: #ffffff;
     }
 
-    /* CÍRCULO SUPERIOR */
-
     .brand::before {
       content: "";
 
@@ -102,8 +112,6 @@
       top: -260px;
     }
 
-    /* CÍRCULO INFERIOR */
-
     .brand::after {
       content: "";
 
@@ -119,8 +127,6 @@
       left: -300px;
       bottom: -300px;
     }
-
-    /* PUNTOS DECORATIVOS */
 
     .dots {
       position: absolute;
@@ -149,8 +155,6 @@
       max-width: 520px;
     }
 
-    /* LOGO */
-
     .logo {
       display: block;
 
@@ -161,8 +165,6 @@
 
       object-fit: contain;
     }
-
-    /* LÍNEA VERDE */
 
     .accent {
       width: 48px;
@@ -175,8 +177,6 @@
       margin-bottom: 28px;
     }
 
-    /* TEXTO PEQUEÑO */
-
     .eyebrow {
       margin-bottom: 18px;
 
@@ -187,8 +187,6 @@
 
       letter-spacing: 4px;
     }
-
-    /* TITULAR */
 
     .brand h1 {
       margin: 0 0 24px;
@@ -206,8 +204,6 @@
     .brand h1 span {
       color: var(--lime);
     }
-
-    /* DESCRIPCIÓN */
 
     .brand p {
       max-width: 475px;
@@ -234,8 +230,6 @@
       width: min(450px, 100%);
     }
 
-    /* BIENVENIDO */
-
     .welcome {
       margin-bottom: 10px;
 
@@ -247,9 +241,7 @@
       letter-spacing: 3.5px;
     }
 
-    /* TITULO LOGIN */
-
-    h2 {
+    .login h2 {
       margin: 0 0 16px;
 
       font-size: 48px;
@@ -258,11 +250,9 @@
       letter-spacing: -1.5px;
     }
 
-    h2 span {
+    .login h2 span {
       color: var(--green);
     }
-
-    /* DESCRIPCIÓN LOGIN */
 
     .sub {
       margin: 0 0 38px;
@@ -273,8 +263,6 @@
       line-height: 1.5;
     }
 
-    /* ETIQUETAS */
-
     label {
       display: block;
 
@@ -283,8 +271,6 @@
       font-size: 14px;
       font-weight: 700;
     }
-
-    /* CAMPO */
 
     .field {
       position: relative;
@@ -326,8 +312,6 @@
         0 0 0 3px rgba(168, 242, 61, 0.14);
     }
 
-    /* ICONOS */
-
     .icon {
       position: absolute;
 
@@ -356,9 +340,7 @@
       stroke-linejoin: round;
     }
 
-    /* BOTÓN */
-
-    button {
+    .login button {
       width: 100%;
       height: 58px;
 
@@ -383,18 +365,18 @@
         box-shadow 0.15s ease;
     }
 
-    button:hover {
+    .login button:hover {
       transform: translateY(-1px);
 
       box-shadow:
         0 12px 28px rgba(168, 242, 61, 0.28);
     }
 
-    button:active {
-      transform: translateY(0);
+    .login button:disabled {
+      opacity: 0.7;
+      cursor: wait;
+      transform: none;
     }
-
-    /* PIE */
 
     .footer {
       margin-top: 40px;
@@ -414,11 +396,490 @@
       color: #66716e;
     }
 
-    /* RESPONSIVE */
+
+    /* =====================================================
+       DASHBOARD
+    ===================================================== */
+
+    #dashboardPage {
+      display: none;
+
+      min-height: 100vh;
+
+      background: #f4f7f6;
+    }
+
+    .dashboard {
+      min-height: 100vh;
+
+      display: grid;
+
+      grid-template-columns: 250px 1fr;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      min-height: 100vh;
+
+      padding: 30px 18px;
+
+      display: flex;
+      flex-direction: column;
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--forest),
+          var(--forest-dark)
+        );
+
+      color: white;
+    }
+
+    .sidebar-logo {
+      width: 155px;
+
+      margin: 5px 15px 42px;
+    }
+
+    .menu-title {
+      padding: 0 15px;
+
+      margin-bottom: 12px;
+
+      color: rgba(255,255,255,0.45);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+
+      gap: 5px;
+    }
+
+    .menu-item {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 13px 15px;
+
+      border-radius: 10px;
+
+      color: #d8e4e0;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .menu-item:hover,
+    .menu-item.active {
+      background: rgba(168, 242, 61, 0.13);
+
+      color: var(--lime);
+    }
+
+    .menu-icon {
+      width: 19px;
+      height: 19px;
+
+      display: grid;
+      place-items: center;
+
+      font-size: 15px;
+    }
+
+    .sidebar-bottom {
+      margin-top: auto;
+
+      padding-top: 25px;
+
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .user-card {
+      display: flex;
+      align-items: center;
+
+      gap: 11px;
+
+      padding: 10px 8px;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--lime);
+
+      color: #153020;
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .user-info {
+      min-width: 0;
+    }
+
+    .user-name {
+      overflow: hidden;
+
+      color: white;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .user-role {
+      margin-top: 3px;
+
+      color: rgba(255,255,255,0.55);
+
+      font-size: 11px;
+    }
+
+    .logout {
+      margin-top: 12px;
+
+      padding: 10px 15px;
+
+      border: 0;
+
+      background: transparent;
+
+      color: rgba(255,255,255,0.60);
+
+      font-size: 12px;
+
+      cursor: pointer;
+
+      text-align: left;
+    }
+
+    .logout:hover {
+      color: var(--lime);
+    }
+
+    /* CONTENIDO */
+
+    .main-content {
+      min-width: 0;
+
+      padding: 30px 38px 45px;
+    }
+
+    .topbar {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 35px;
+    }
+
+    .search {
+      width: min(520px, 100%);
+
+      height: 44px;
+
+      padding: 0 18px;
+
+      border: 1px solid #dce5e1;
+
+      border-radius: 10px;
+
+      background: white;
+
+      color: #66716e;
+
+      font-size: 13px;
+    }
+
+    .top-user {
+      color: #6d7874;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .welcome-dashboard {
+      margin-bottom: 6px;
+
+      font-size: 30px;
+      font-weight: 800;
+
+      letter-spacing: -0.8px;
+    }
+
+    .dashboard-sub {
+      margin: 0 0 30px;
+
+      color: #75817d;
+
+      font-size: 14px;
+    }
+
+    /* KPI */
+
+    .kpis {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 18px;
+
+      margin-bottom: 25px;
+    }
+
+    .kpi {
+      min-height: 135px;
+
+      padding: 21px;
+
+      border: 1px solid #e2e9e6;
+
+      border-radius: 15px;
+
+      background: white;
+
+      box-shadow:
+        0 5px 18px rgba(4,45,35,0.04);
+    }
+
+    .kpi-title {
+      color: #7b8682;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .kpi-number {
+      margin-top: 16px;
+
+      color: var(--forest);
+
+      font-size: 31px;
+      font-weight: 800;
+    }
+
+    .kpi-note {
+      margin-top: 4px;
+
+      color: #9aa39f;
+
+      font-size: 11px;
+    }
+
+    /* PANELES */
+
+    .panels {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+
+      margin-bottom: 25px;
+    }
+
+    .panel {
+      min-height: 210px;
+
+      padding: 23px;
+
+      border: 1px solid #e2e9e6;
+
+      border-radius: 15px;
+
+      background: white;
+    }
+
+    .panel-header {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 24px;
+    }
+
+    .panel-title {
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .panel-link {
+      color: #65a62b;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      cursor: pointer;
+    }
+
+    .empty {
+      min-height: 115px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px dashed #dce5e1;
+
+      border-radius: 11px;
+
+      color: #9aa39f;
+
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* ACTIVIDAD */
+
+    .recent {
+      padding: 23px;
+
+      border: 1px solid #e2e9e6;
+
+      border-radius: 15px;
+
+      background: white;
+    }
+
+    .recent-header {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 20px;
+    }
+
+    .filters {
+      display: flex;
+
+      gap: 6px;
+    }
+
+    .filter {
+      padding: 7px 12px;
+
+      border: 1px solid #dce5e1;
+
+      border-radius: 20px;
+
+      background: white;
+
+      color: #7c8783;
+
+      font-size: 11px;
+
+      cursor: pointer;
+    }
+
+    .filter.active {
+      border-color: var(--lime);
+
+      background: rgba(168,242,61,0.16);
+
+      color: #39701b;
+    }
+
+    /* ACCESOS */
+
+    .quick-title {
+      margin: 28px 0 14px;
+
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .quick {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 13px;
+    }
+
+    .quick-item {
+      padding: 17px;
+
+      border: 1px solid #e2e9e6;
+
+      border-radius: 12px;
+
+      background: white;
+
+      color: var(--forest);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .quick-item:hover {
+      border-color: #b8d89a;
+
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 7px 18px rgba(4,45,35,0.05);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1050px) {
+
+      .kpis {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .quick {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+    }
 
     @media (max-width: 850px) {
 
-      body {
+      #loginPage {
         padding: 0;
       }
 
@@ -448,14 +909,69 @@
         padding: 48px 30px 30px;
       }
 
-      h2 {
+      .login h2 {
         font-size: 40px;
       }
+
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        min-height: auto;
+      }
+
+      .menu {
+        flex-direction: row;
+
+        overflow-x: auto;
+      }
+
+      .menu-item {
+        min-width: max-content;
+      }
+
+      .sidebar-bottom {
+        display: none;
+      }
+
+      .main-content {
+        padding: 25px 20px;
+      }
+
+      .panels {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
     }
+
+    @media (max-width: 600px) {
+
+      .kpis {
+        grid-template-columns: 1fr;
+      }
+
+      .quick {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     LOGIN
+===================================================== -->
+
+<section id="loginPage">
 
   <main class="shell">
 
@@ -514,7 +1030,7 @@
         </p>
 
 
-        <form onsubmit="event.preventDefault();">
+        <form id="loginForm">
 
           <!-- USUARIO -->
 
@@ -625,6 +1141,594 @@
     </section>
 
   </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<section id="dashboardPage">
+
+  <div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <img
+        class="sidebar-logo"
+        src="inroute-logo-clean.png"
+        alt="Inroute"
+      >
+
+
+      <div class="menu-title">
+        OPERACIÓN
+      </div>
+
+
+      <nav class="menu">
+
+        <div class="menu-item active">
+          <span class="menu-icon">⌂</span>
+          Inicio
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">▣</span>
+          Casos Webfleet
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">◌</span>
+          Solicitudes WhatsApp
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">◇</span>
+          Clientes
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">▤</span>
+          Reportes
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">⚙</span>
+          Administración
+        </div>
+
+      </nav>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="user-card">
+
+          <div class="avatar" id="dashboardAvatar">
+            OH
+          </div>
+
+          <div class="user-info">
+
+            <div
+              class="user-name"
+              id="dashboardUserName"
+            >
+              Oscar A. Hernández
+            </div>
+
+            <div
+              class="user-role"
+              id="dashboardUserRole"
+            >
+              Administrador
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="logout"
+          id="logoutButton"
+        >
+          Cerrar sesión
+        </button>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- CONTENIDO -->
+
+    <main class="main-content">
+
+
+      <!-- TOPBAR -->
+
+      <div class="topbar">
+
+        <input
+          class="search"
+          type="text"
+          placeholder="Buscar cliente, unidad, caso o solicitud..."
+        >
+
+        <div class="top-user">
+          Portal Inroute
+        </div>
+
+      </div>
+
+
+      <!-- BIENVENIDA -->
+
+      <div class="welcome-dashboard">
+
+        Bienvenido,
+        <span id="welcomeName">
+          Oscar
+        </span>
+
+      </div>
+
+
+      <p class="dashboard-sub">
+        Una vista rápida del estado actual de casos,
+        solicitudes y actividad de nuestros clientes.
+      </p>
+
+
+      <!-- KPI -->
+
+      <section class="kpis">
+
+
+        <div class="kpi">
+
+          <div class="kpi-title">
+            Casos Webfleet
+          </div>
+
+          <div class="kpi-number">
+            0
+          </div>
+
+          <div class="kpi-note">
+            Sin datos conectados todavía
+          </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+          <div class="kpi-title">
+            Solicitudes WhatsApp
+          </div>
+
+          <div class="kpi-number">
+            0
+          </div>
+
+          <div class="kpi-note">
+            Sin datos conectados todavía
+          </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+          <div class="kpi-title">
+            Clientes activos
+          </div>
+
+          <div class="kpi-number">
+            0
+          </div>
+
+          <div class="kpi-note">
+            Sin datos conectados todavía
+          </div>
+
+        </div>
+
+
+        <div class="kpi">
+
+          <div class="kpi-title">
+            Pendientes de atención
+          </div>
+
+          <div class="kpi-number">
+            0
+          </div>
+
+          <div class="kpi-note">
+            Sin datos conectados todavía
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- PANELES -->
+
+      <section class="panels">
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div class="panel-title">
+              Actividad Webfleet
+            </div>
+
+            <div class="panel-link">
+              Ver todo
+            </div>
+
+          </div>
+
+          <div class="empty">
+
+            Todavía no hay información conectada.
+
+          </div>
+
+        </div>
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div class="panel-title">
+              Actividad WhatsApp
+            </div>
+
+            <div class="panel-link">
+              Ver todo
+            </div>
+
+          </div>
+
+          <div class="empty">
+
+            Todavía no hay información conectada.
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ACTIVIDAD RECIENTE -->
+
+      <section class="recent">
+
+        <div class="recent-header">
+
+          <div class="panel-title">
+            Actividad reciente
+          </div>
+
+
+          <div class="filters">
+
+            <button class="filter active">
+              Todos
+            </button>
+
+            <button class="filter">
+              Webfleet
+            </button>
+
+            <button class="filter">
+              WhatsApp
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="empty">
+
+          La actividad aparecerá aquí cuando conectemos
+          las fuentes de información.
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ACCESOS RÁPIDOS -->
+
+      <div class="quick-title">
+        Accesos rápidos
+      </div>
+
+
+      <section class="quick">
+
+        <div class="quick-item">
+          + &nbsp; Registrar nuevo caso
+        </div>
+
+        <div class="quick-item">
+          + &nbsp; Nueva solicitud WhatsApp
+        </div>
+
+        <div class="quick-item">
+          ◇ &nbsp; Buscar cliente
+        </div>
+
+        <div class="quick-item">
+          ▤ &nbsp; Generar reporte
+        </div>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONEXIÓN CON APPS SCRIPT
+===================================================== -->
+
+<script>
+
+const APP_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwYLW4FlhRWhc58tuZu-s1cgpMbvtyjmcuCQd5DMTrDsmRdAa45wb6w44UUFMyeiuE/exec";
+
+
+const loginForm =
+  document.getElementById("loginForm");
+
+
+loginForm.addEventListener(
+  "submit",
+  async function(event) {
+
+    event.preventDefault();
+
+
+    const correo =
+      document
+        .getElementById("usuario")
+        .value
+        .trim();
+
+
+    const contrasena =
+      document
+        .getElementById("password")
+        .value;
+
+
+    const boton =
+      loginForm.querySelector("button");
+
+
+    if (!correo || !contrasena) {
+
+      alert(
+        "Ingresa tu usuario y contraseña."
+      );
+
+      return;
+    }
+
+
+    boton.disabled = true;
+
+    boton.textContent =
+      "Validando...";
+
+
+    try {
+
+
+      const respuesta =
+        await fetch(
+          APP_SCRIPT_URL,
+          {
+            method: "POST",
+
+            body:
+              new URLSearchParams({
+                correo: correo,
+                contrasena: contrasena
+              })
+          }
+        );
+
+
+      const resultado =
+        await respuesta.json();
+
+
+      if (resultado.ok) {
+
+
+        /* DATOS DEL USUARIO */
+
+        const usuario =
+          resultado.usuario;
+
+
+        document
+          .getElementById(
+            "welcomeName"
+          )
+          .textContent =
+            usuario.nombre
+              .split(" ")[0];
+
+
+        document
+          .getElementById(
+            "dashboardUserName"
+          )
+          .textContent =
+            usuario.nombre;
+
+
+        document
+          .getElementById(
+            "dashboardUserRole"
+          )
+          .textContent =
+            usuario.rol;
+
+
+        /* INICIALES */
+
+        const nombres =
+          usuario.nombre
+            .trim()
+            .split(" ");
+
+
+        let iniciales = "";
+
+
+        if (nombres.length >= 2) {
+
+          iniciales =
+            nombres[0].charAt(0) +
+            nombres[1].charAt(0);
+
+        } else {
+
+          iniciales =
+            nombres[0].charAt(0);
+
+        }
+
+
+        document
+          .getElementById(
+            "dashboardAvatar"
+          )
+          .textContent =
+            iniciales.toUpperCase();
+
+
+        /* CAMBIAR DE LOGIN A DASHBOARD */
+
+        document
+          .getElementById(
+            "loginPage"
+          )
+          .style.display =
+            "none";
+
+
+        document
+          .getElementById(
+            "dashboardPage"
+          )
+          .style.display =
+            "block";
+
+
+        /* LIMPIAR FORMULARIO */
+
+        loginForm.reset();
+
+
+      } else {
+
+
+        alert(
+          resultado.mensaje ||
+          "Correo o contraseña incorrectos."
+        );
+
+      }
+
+
+    } catch (error) {
+
+
+      console.error(error);
+
+
+      alert(
+        "No fue posible conectar con el servidor."
+      );
+
+
+    } finally {
+
+
+      boton.disabled = false;
+
+      boton.textContent =
+        "Ingresar al Portal →";
+
+    }
+
+  }
+);
+
+
+
+/* =====================================================
+   CERRAR SESIÓN
+===================================================== */
+
+document
+  .getElementById("logoutButton")
+  .addEventListener(
+    "click",
+    function() {
+
+      document
+        .getElementById(
+          "dashboardPage"
+        )
+        .style.display =
+          "none";
+
+
+      document
+        .getElementById(
+          "loginPage"
+        )
+        .style.display =
+          "grid";
+
+    }
+  );
+
+
+</script>
+
 
 </body>
 </html>
