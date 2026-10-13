@@ -1,0 +1,777 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portal Inroute</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOGIN
+===================================================== -->
+
+<section id="loginPage">
+
+  <main class="shell">
+
+    <!-- PANEL IZQUIERDO -->
+
+    <section class="brand">
+
+      <div class="dots"></div>
+
+      <div class="brand-inner">
+
+        <img
+          class="logo"
+          src="inroute-logo-clean.png"
+          alt="Inroute - Telematics Solutions"
+        >
+
+        <div class="accent"></div>
+
+        <div class="eyebrow">
+          PORTAL INROUTE
+        </div>
+
+        <h1>
+          Toda nuestra operación,<br>
+          <span>en un solo lugar.</span>
+        </h1>
+
+        <p>
+          Una plataforma interna para gestionar, registrar
+          y dar seguimiento a la operación de nuestros clientes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PANEL DERECHO -->
+
+    <section class="login">
+
+      <div class="login-inner">
+
+        <div class="welcome">
+          BIENVENIDO AL
+        </div>
+
+        <h2>
+          Portal <span>Inroute</span>
+        </h2>
+
+        <p class="sub">
+          Ingresa con tu usuario para acceder a la plataforma
+          interna de Inroute.
+        </p>
+
+
+        <form id="loginForm">
+
+          <!-- USUARIO -->
+
+          <label for="usuario">
+            Usuario
+          </label>
+
+          <div class="field">
+
+            <input
+              id="usuario"
+              type="text"
+              placeholder="usuario@inroute.com"
+              autocomplete="username"
+            >
+
+            <span class="icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                ></rect>
+
+                <path
+                  d="M3 7l9 6 9-6"
+                ></path>
+
+              </svg>
+
+            </span>
+
+          </div>
+
+
+          <!-- CONTRASEÑA -->
+
+          <label for="password">
+            Contraseña
+          </label>
+
+          <div class="field">
+
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••••"
+              autocomplete="current-password"
+            >
+
+            <span class="icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <rect
+                  x="5"
+                  y="10"
+                  width="14"
+                  height="11"
+                  rx="2"
+                ></rect>
+
+                <path
+                  d="M8 10V7a4 4 0 0 1 8 0v3"
+                ></path>
+
+              </svg>
+
+            </span>
+
+          </div>
+
+
+          <!-- BOTÓN -->
+
+          <button type="submit">
+            Ingresar al Portal&nbsp; →
+          </button>
+
+        </form>
+
+
+        <!-- PIE -->
+
+        <div class="footer">
+
+          © 2026 Portal Inroute.<br>
+
+          Desarrollado por
+          <strong>Oscar A. Hernández</strong>
+          para apoyar el registro, seguimiento y control
+          en el área de SAC.
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<section id="dashboardPage">
+
+  <div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <img
+        class="sidebar-logo"
+        src="inroute-logo-clean.png"
+        alt="Inroute"
+      >
+
+
+      <div class="menu-title">
+        OPERACIÓN
+      </div>
+
+
+      <nav class="menu">
+
+        <div class="menu-item active" id="homeMenuItem" role="button" tabindex="0">
+          <span class="menu-icon">⌂</span>
+          Inicio
+        </div>
+
+        <div class="menu-item" id="casesMenuItem" role="button" tabindex="0">
+          <span class="menu-icon">▣</span>
+          Casos Webfleet
+        </div>
+
+        <div class="menu-item" id="whatsappMenuItem" role="button" tabindex="0">
+          <span class="menu-icon"><svg class="whatsapp-brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 11.65a8.25 8.25 0 0 1-12.15 7.3L3.75 20l1.08-4.1a8.25 8.25 0 1 1 15.42-4.25Z"/><path class="whatsapp-handset" transform="translate(12 12) scale(.76) translate(-10.7 -11.85)" d="M8.05 7.15c-.45-.42-1.1-.37-1.48.12l-.55.72c-.38.5-.47 1.12-.28 1.72.78 2.42 3.97 5.61 6.39 6.39.6.19 1.22.1 1.72-.28l.72-.55c.49-.38.54-1.03.12-1.48l-1.32-1.42a.98.98 0 0 0-1.4-.04l-.88.83a7.27 7.27 0 0 1-2.4-2.4l.83-.88a.98.98 0 0 0-.04-1.4L8.05 7.15Z"/></svg></span>
+          Solicitudes WhatsApp
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">◇</span>
+          Clientes
+        </div>
+
+        <div class="menu-item">
+          <span class="menu-icon">⚙</span>
+          Administración
+        </div>
+
+
+
+      </nav>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="user-card">
+
+          <div class="avatar" id="dashboardAvatar">
+            OH
+          </div>
+
+          <div class="user-info">
+
+            <div
+              class="user-name"
+              id="dashboardUserName"
+            >
+              Oscar A. Hernández
+            </div>
+
+            <div
+              class="user-role"
+              id="dashboardUserRole"
+            >
+              Administrador
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="logout"
+          id="logoutButton"
+        >
+          Cerrar sesión
+        </button>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- CONTENIDO -->
+
+    <main class="main-content">
+
+
+      <!-- TOPBAR -->
+
+      <div class="topbar">
+
+        <div class="topbar-date" aria-label="Fecha y hora actuales">
+          <span id="todayWeekday" class="today-weekday"></span>
+          <time id="todayDate" class="today-date"></time>
+        </div>
+
+      </div>
+
+
+
+      <section id="homeView">
+      <!-- BIENVENIDA -->
+
+      <div class="welcome-dashboard">
+
+        Bienvenido,
+        <span id="welcomeName">
+          Oscar
+        </span>
+
+      </div>
+
+
+      <p class="dashboard-sub">
+        Una vista rápida del estado actual de casos,
+        solicitudes y actividad de nuestros clientes.
+      </p>
+
+
+      <!-- KPI -->
+
+      <section class="kpis home-kpis" aria-label="Resumen de actividad">
+        <article class="case-kpi home-kpi">
+          <div class="case-kpi-icon case-kpi-icon--green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v13h14V7a2 2 0 0 0-2-2h-2M9 5a3 3 0 0 1 6 0v2H9V5ZM9 12h6M9 16h6"/></svg></div>
+          <div class="case-kpi-copy"><span>Casos Webfleet</span><strong id="homeCasesTotal">0</strong><small class="case-kpi-note">Registros de demostración</small></div>
+        </article>
+        <article class="case-kpi home-kpi">
+          <div class="case-kpi-icon case-kpi-icon--green"><svg class="whatsapp-brand-mark whatsapp-kpi-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 11.65a8.25 8.25 0 0 1-12.15 7.3L3.75 20l1.08-4.1a8.25 8.25 0 1 1 15.42-4.25Z"/><path class="whatsapp-handset" transform="translate(12 12) scale(.76) translate(-10.7 -11.85)" d="M8.05 7.15c-.45-.42-1.1-.37-1.48.12l-.55.72c-.38.5-.47 1.12-.28 1.72.78 2.42 3.97 5.61 6.39 6.39.6.19 1.22.1 1.72-.28l.72-.55c.49-.38.54-1.03.12-1.48l-1.32-1.42a.98.98 0 0 0-1.4-.04l-.88.83a7.27 7.27 0 0 1-2.4-2.4l.83-.88a.98.98 0 0 0-.04-1.4L8.05 7.15Z"/></svg></div>
+          <div class="case-kpi-copy"><span>Solicitudes WhatsApp</span><strong id="homeWhatsAppTotal">0</strong><small class="case-kpi-note">Registros de demostración</small></div>
+        </article>
+        <article class="case-kpi home-kpi">
+          <div class="case-kpi-icon case-kpi-icon--lime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5c.4-3 2.25-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.25a3.25 3.25 0 0 1 0 6.5M17 15c2.1.35 3.3 1.85 3.5 4.5"/></svg></div>
+          <div class="case-kpi-copy"><span>Clientes activos</span><strong>0</strong><small class="case-kpi-note">Módulo en preparación</small></div>
+        </article>
+      </section>
+
+
+
+      <!-- PANELES -->
+
+      <section class="panels">
+
+
+        <section class="panel home-activity-panel">
+          <div class="panel-header"><h2 class="panel-title">Actividad Webfleet</h2></div>
+          <div class="home-table-wrap"><table class="home-data-table"><thead><tr><th>Fecha</th><th>Caso</th><th>Descripción / motivo</th><th>Cliente</th><th>Estado</th></tr></thead><tbody id="homeCasesBody"></tbody></table></div>
+        </section>
+        <section class="panel home-activity-panel">
+          <div class="panel-header"><h2 class="panel-title">Actividad WhatsApp</h2></div>
+          <div class="home-table-wrap"><table class="home-data-table"><thead><tr><th>Fecha</th><th>Tipo de solicitud</th><th>Descripción</th><th>Cliente</th><th>Estado</th></tr></thead><tbody id="homeWhatsAppBody"></tbody></table></div>
+        </section>
+
+      </section>
+
+
+
+      <!-- ACTIVIDAD RECIENTE -->
+
+      <section class="recent">
+
+        <div class="recent-header">
+
+          <div class="panel-title">
+            Actividad reciente
+          </div>
+
+
+        </div>
+        <div class="home-table-wrap"><table class="home-data-table"><thead><tr><th>Fecha</th><th>Módulo</th><th>Descripción</th><th>Cliente</th><th>Estado</th></tr></thead><tbody id="homeRecentBody"></tbody></table></div>
+
+      </section>
+      </section>
+
+      <section id="casesView" class="cases-view" hidden>
+        <header class="cases-heading">
+          <div>
+            <h1><svg class="cases-title-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v13h14V7a2 2 0 0 0-2-2h-2M9 5a3 3 0 0 1 6 0v2H9V5ZM9 12h6M9 16h6"/></svg>Casos Webfleet</h1>
+            <p>Consulta y seguimiento de casos registrados en Webfleet</p>
+          </div>
+          <button class="button-primary new-case-button" id="openNewCase" type="button"><span aria-hidden="true">+</span> Nuevo caso</button>
+        </header>
+
+        <section class="case-kpis" aria-label="Indicadores de casos">
+          <article class="case-kpi">
+            <div class="case-kpi-icon case-kpi-icon--green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v13h14V7a2 2 0 0 0-2-2h-2M9 5a3 3 0 0 1 6 0v2H9V5ZM9 12h6M9 16h6"/></svg></div>
+            <div class="case-kpi-copy"><span>Total de casos</span><strong id="totalCasesKpi">0</strong><small class="case-kpi-note">En el periodo seleccionado</small></div>
+          </article>
+          <article class="case-kpi">
+            <div class="case-kpi-icon case-kpi-icon--yellow"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="M12 7.5v5l3.25 2"/></svg></div>
+            <div class="case-kpi-copy"><span>Pendientes</span><strong id="pendingCasesKpi">0</strong><small class="case-kpi-note" id="pendingCasesNote">0% del total</small></div>
+          </article>
+          <article class="case-kpi">
+            <div class="case-kpi-icon case-kpi-icon--red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75 20.5 19h-17z"/><path d="M12 9v4.5M12 16.5h.01"/></svg></div>
+            <div class="case-kpi-copy"><span>Segunda Línea</span><strong id="secondLineCasesKpi">0</strong><small class="case-kpi-note" id="secondLineCasesNote">0% del total</small></div>
+          </article>
+          <article class="case-kpi">
+            <div class="case-kpi-icon case-kpi-icon--lime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="M12 7.5v5l3.25 2M17.8 5.8l1.7-1.7"/></svg></div>
+            <div class="case-kpi-copy"><span>Último registro</span><strong id="latestCaseKpi">—</strong><small class="case-kpi-note" id="latestCaseTimeKpi"></small></div>
+          </article>
+        </section>
+
+        <section class="case-filter-card" aria-labelledby="filtersTitle">
+          <div class="case-section-heading">
+            <div><h2 id="filtersTitle"><svg class="section-title-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6.25 7.25v5l-3.5 1.75v-6.75z"/></svg>Filtros de búsqueda</h2><p>Combina criterios para consultar los casos registrados.</p></div>
+            <div class="case-filter-actions">
+              <button type="button" class="button-secondary" id="clearCaseFilters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11a7.5 7.5 0 1 1 2.2 5.3"/><path d="M4.5 5.5v5.5H10"/></svg>Limpiar filtros</button>
+              <button type="button" class="button-primary" id="exportCases"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75v11M7.75 10.5 12 14.75l4.25-4.25M5 16.5v3.75h14V16.5"/></svg>Exportar resultados</button>
+            </div>
+          </div>
+          <div class="case-filters-grid">
+            <div class="case-filter-control case-quick-search-control"><label class="case-filter-label" for="caseQuickSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>Búsqueda rápida</label>
+              <div class="case-quick-search-wrap"><input id="caseQuickSearch" type="search" placeholder="Buscar por caso, unidad, cliente, dispositivo…" autocomplete="off"><button type="button" id="clearCaseQuickSearch" aria-label="Borrar búsqueda rápida" hidden>×</button></div>
+            </div>
+            <div class="case-filter-control" id="caseCreatorFilter" hidden><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5c.4-3 2.25-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.25a3.25 3.25 0 0 1 0 6.5M17 15c2.1.35 3.3 1.85 3.5 4.5"/></svg>Registrado por</span>
+              <div class="case-select"><select id="caseRegisteredBy"><option value="">Todos los usuarios</option></select></div>
+            </div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg>Periodo</span>
+              <div class="case-select"><select id="casePeriod"><option value="thisMonth">Este mes</option><option value="lastMonth">Mes anterior</option><option value="specificMonth">Mes específico</option></select></div>
+            </div>
+            <div id="specificMonthField" class="case-filter-control conditional-filter" hidden><span id="caseMonthLabel" class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg>Mes y año</span>
+              <div class="case-month-picker" id="caseMonthPicker">
+                <input id="caseSpecificMonth" type="hidden" value="">
+                <button type="button" class="case-month-trigger" id="caseMonthTrigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="caseMonthPopover" aria-labelledby="caseMonthLabel caseMonthValue">
+                  <span id="caseMonthValue">Selecciona un mes y año</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+                </button>
+                <div class="case-month-popover" id="caseMonthPopover" role="dialog" aria-labelledby="caseMonthPickerTitle" hidden>
+                  <div class="case-month-picker-header">
+                    <button type="button" class="case-year-nav" id="caseMonthPreviousYear" aria-label="Año anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button>
+                    <strong id="caseMonthPickerTitle"></strong>
+                    <button type="button" class="case-year-nav" id="caseMonthNextYear" aria-label="Año siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+                  </div>
+                  <div class="case-month-grid" id="caseMonthGrid" role="group" aria-label="Meses"></div>
+                </div>
+              </div>
+            </div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5c.4-3 2.25-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.25a3.25 3.25 0 0 1 0 6.5M17 15c2.1.35 3.3 1.85 3.5 4.5"/></svg>Cliente</span>
+              <div class="case-select"><select id="caseClient"><option value="">Todos los clientes</option></select></div>
+            </div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 7h6M9 11h6M9 15h2M12 17h3"/></svg>Dispositivo</span>
+              <div class="case-select"><select id="caseDevice"><option value="">Todos los dispositivos</option></select></div>
+            </div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="m8.5 12 2.25 2.25 4.75-5"/></svg>Estado</span>
+              <div class="case-select"><select id="caseStatus"><option value="">Todos los estados</option></select></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-results-card" aria-labelledby="resultsTitle">
+          <div class="case-view-switch" role="group" aria-label="Vista de casos">
+            <button type="button" class="case-view-switch-button is-active" id="showAllCases" data-case-view="all" aria-pressed="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.4-3 2.3-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.5a3 3 0 1 1 0 6M17 14.5c2.1.4 3.4 1.8 3.5 4.5"/></svg>
+              Todos los casos
+            </button>
+            <button type="button" class="case-view-switch-button" id="showMyCases" data-case-view="mine" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"/><path d="M4.5 20c.5-4.1 3-6.2 7.5-6.2s7 2.1 7.5 6.2"/></svg>
+              Mis casos
+            </button>
+          </div>
+          <div class="case-results-heading">
+            <div><h2 id="resultsTitle">Resultados de casos</h2><p id="caseResultSummary">0 resultados</p></div>
+          </div>
+          <div class="case-table-wrap">
+            <table class="case-table">
+              <thead><tr>
+                <th># Caso</th><th>Fecha de registro</th><th>Cliente</th><th>Unidad</th><th>Motivo</th><th>Dispositivo</th><th>Estado</th><th>Acciones</th>
+              </tr></thead>
+              <tbody id="casesTableBody"></tbody>
+            </table>
+            <div id="caseEmptyState" class="case-empty-state" hidden>No hay casos que coincidan con los filtros seleccionados.</div>
+          </div>
+          <div class="case-pagination">
+            <div class="case-page-size-label">Mostrar resultados por página
+              <div class="case-select case-page-select"><select id="casePageSize" aria-label="Mostrar resultados por página"><option value="10">10</option><option value="25">25</option><option value="50">50</option></select></div>
+            </div>
+            <div class="pagination-controls"><span id="casePageSummary">Página 1 de 1</span><button type="button" id="casePreviousPage" aria-label="Página anterior">‹</button><button type="button" id="caseNextPage" aria-label="Página siguiente">›</button></div>
+          </div>
+        </section>
+      </section>
+
+      <section id="whatsappView" class="cases-view whatsapp-view" hidden>
+        <header class="cases-heading">
+          <div>
+            <h1><svg class="cases-title-icon whatsapp-title-icon whatsapp-brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 11.65a8.25 8.25 0 0 1-12.15 7.3L3.75 20l1.08-4.1a8.25 8.25 0 1 1 15.42-4.25Z"/><path class="whatsapp-handset" transform="translate(12 12) scale(.76) translate(-10.7 -11.85)" d="M8.05 7.15c-.45-.42-1.1-.37-1.48.12l-.55.72c-.38.5-.47 1.12-.28 1.72.78 2.42 3.97 5.61 6.39 6.39.6.19 1.22.1 1.72-.28l.72-.55c.49-.38.54-1.03.12-1.48l-1.32-1.42a.98.98 0 0 0-1.4-.04l-.88.83a7.27 7.27 0 0 1-2.4-2.4l.83-.88a.98.98 0 0 0-.04-1.4L8.05 7.15Z"/></svg>Solicitudes WhatsApp</h1>
+            <p>Registro y seguimiento de solicitudes recibidas por WhatsApp</p>
+          </div>
+          <button class="button-primary new-case-button" id="openNewWhatsApp" type="button"><span aria-hidden="true">+</span> Nueva solicitud</button>
+        </header>
+
+        <section class="case-kpis" aria-label="Indicadores de solicitudes WhatsApp">
+          <article class="case-kpi"><div class="case-kpi-icon case-kpi-icon--green"><svg class="whatsapp-brand-mark whatsapp-kpi-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 11.65a8.25 8.25 0 0 1-12.15 7.3L3.75 20l1.08-4.1a8.25 8.25 0 1 1 15.42-4.25Z"/><path class="whatsapp-handset" transform="translate(12 12) scale(.76) translate(-10.7 -11.85)" d="M8.05 7.15c-.45-.42-1.1-.37-1.48.12l-.55.72c-.38.5-.47 1.12-.28 1.72.78 2.42 3.97 5.61 6.39 6.39.6.19 1.22.1 1.72-.28l.72-.55c.49-.38.54-1.03.12-1.48l-1.32-1.42a.98.98 0 0 0-1.4-.04l-.88.83a7.27 7.27 0 0 1-2.4-2.4l.83-.88a.98.98 0 0 0-.04-1.4L8.05 7.15Z"/></svg></div><div class="case-kpi-copy"><span>Total de solicitudes</span><strong id="totalWhatsAppKpi">0</strong><small class="case-kpi-note">Con los filtros actuales</small></div></article>
+          <article class="case-kpi"><div class="case-kpi-icon case-kpi-icon--yellow"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="M12 7.5v5l3.25 2"/></svg></div><div class="case-kpi-copy"><span>Pendientes</span><strong id="pendingWhatsAppKpi">0</strong><small class="case-kpi-note" id="pendingWhatsAppNote">0% del total</small></div></article>
+          <article class="case-kpi"><div class="case-kpi-icon case-kpi-icon--red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75 20.5 19h-17z"/><path d="M12 9v4.5M12 16.5h.01"/></svg></div><div class="case-kpi-copy"><span>Escaladas a Freshservice</span><strong id="escalatedWhatsAppKpi">0</strong><small class="case-kpi-note" id="escalatedWhatsAppNote">0% del total</small></div></article>
+          <article class="case-kpi"><div class="case-kpi-icon case-kpi-icon--lime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="M12 7.5v5l3.25 2M17.8 5.8l1.7-1.7"/></svg></div><div class="case-kpi-copy"><span>Último registro</span><strong id="latestWhatsAppKpi">—</strong><small class="case-kpi-note" id="latestWhatsAppTimeKpi"></small></div></article>
+        </section>
+
+        <section class="case-filter-card" aria-labelledby="whatsappFiltersTitle">
+          <div class="case-section-heading">
+            <div><h2 id="whatsappFiltersTitle"><svg class="section-title-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6.25 7.25v5l-3.5 1.75v-6.75z"/></svg>Filtros de búsqueda</h2><p>Combina criterios para consultar las solicitudes registradas.</p></div>
+            <div class="case-filter-actions">
+              <button type="button" class="button-secondary" id="clearWhatsAppFilters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11a7.5 7.5 0 1 1 2.2 5.3"/><path d="M4.5 5.5v5.5H10"/></svg>Limpiar filtros</button>
+              <button type="button" class="button-primary" id="exportWhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75v11M7.75 10.5 12 14.75l4.25-4.25M5 16.5v3.75h14V16.5"/></svg>Exportar resultados</button>
+            </div>
+          </div>
+          <div class="case-filters-grid whatsapp-filters-grid">
+            <div class="case-filter-control case-quick-search-control"><label class="case-filter-label" for="whatsappQuickSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>Búsqueda rápida</label><div class="case-quick-search-wrap"><input id="whatsappQuickSearch" type="search" placeholder="Buscar cliente, unidad, tipo, dispositivo…" autocomplete="off"><button type="button" id="clearWhatsAppQuickSearch" aria-label="Borrar búsqueda rápida" hidden>×</button></div></div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg>Periodo</span><div class="case-select"><select id="whatsappPeriod"><option value="thisMonth">Este mes</option><option value="lastMonth">Mes anterior</option><option value="specificMonth">Mes específico</option><option value="customRange">Rango de fechas</option></select></div></div>
+            <div id="whatsappMonthField" class="case-filter-control conditional-filter" hidden><span id="whatsappMonthLabel" class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg>Mes y año</span>
+              <div class="case-month-picker" id="whatsappMonthPicker">
+                <input id="whatsappSpecificMonth" type="hidden" value="">
+                <button type="button" class="case-month-trigger" id="whatsappMonthTrigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="whatsappMonthPopover" aria-labelledby="whatsappMonthLabel whatsappMonthValue">
+                  <span id="whatsappMonthValue">Selecciona un mes y año</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+                </button>
+                <div class="case-month-popover" id="whatsappMonthPopover" role="dialog" aria-labelledby="whatsappMonthPickerTitle" hidden>
+                  <div class="case-month-picker-header">
+                    <button type="button" class="case-year-nav" id="whatsappMonthPreviousYear" aria-label="Año anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button>
+                    <strong id="whatsappMonthPickerTitle"></strong>
+                    <button type="button" class="case-year-nav" id="whatsappMonthNextYear" aria-label="Año siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+                  </div>
+                  <div class="case-month-grid" id="whatsappMonthGrid" role="group" aria-label="Meses"></div>
+                </div>
+              </div>
+            </div>
+            <div id="whatsappRangeFields" class="whatsapp-date-range" hidden>
+              <div class="case-filter-control">
+                <span id="whatsappDateStartLabel" class="case-filter-label">Fecha inicial</span>
+                <div class="case-date-picker" id="whatsappDateStartPicker">
+                  <input id="whatsappDateStart" type="hidden" value="">
+                  <button type="button" class="case-date-trigger" id="whatsappDateStartTrigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="whatsappDateStartPopover" aria-labelledby="whatsappDateStartLabel whatsappDateStartValue"><span id="whatsappDateStartValue">Selecciona una fecha</span><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="5" width="13" height="11.5" rx="2"/><path d="M6.5 3.5v3M13.5 3.5v3M3.5 8.5h13"/></svg></button>
+                  <div class="case-date-popover" id="whatsappDateStartPopover" role="dialog" aria-labelledby="whatsappDateStartTitle" hidden>
+                    <div class="case-date-picker-header"><button type="button" class="case-date-nav" id="whatsappDateStartPrevious" aria-label="Mes anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button><strong id="whatsappDateStartTitle"></strong><button type="button" class="case-date-nav" id="whatsappDateStartNext" aria-label="Mes siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div>
+                    <div class="case-date-weekdays" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+                    <div class="case-date-grid" id="whatsappDateStartGrid" role="group" aria-label="Días del mes"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="case-filter-control">
+                <span id="whatsappDateEndLabel" class="case-filter-label">Fecha final</span>
+                <div class="case-date-picker" id="whatsappDateEndPicker">
+                  <input id="whatsappDateEnd" type="hidden" value="">
+                  <button type="button" class="case-date-trigger" id="whatsappDateEndTrigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="whatsappDateEndPopover" aria-labelledby="whatsappDateEndLabel whatsappDateEndValue"><span id="whatsappDateEndValue">Selecciona una fecha</span><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="5" width="13" height="11.5" rx="2"/><path d="M6.5 3.5v3M13.5 3.5v3M3.5 8.5h13"/></svg></button>
+                  <div class="case-date-popover" id="whatsappDateEndPopover" role="dialog" aria-labelledby="whatsappDateEndTitle" hidden>
+                    <div class="case-date-picker-header"><button type="button" class="case-date-nav" id="whatsappDateEndPrevious" aria-label="Mes anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button><strong id="whatsappDateEndTitle"></strong><button type="button" class="case-date-nav" id="whatsappDateEndNext" aria-label="Mes siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div>
+                    <div class="case-date-weekdays" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+                    <div class="case-date-grid" id="whatsappDateEndGrid" role="group" aria-label="Días del mes"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5c.4-3 2.25-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.25a3.25 3.25 0 0 1 0 6.5M17 15c2.1.35 3.3 1.85 3.5 4.5"/></svg>Cliente</span><div class="case-select"><select id="whatsappClient"><option value="">Todos los clientes</option></select></div></div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 7h6M9 11h6M9 15h2M12 17h3"/></svg>Tipo de solicitud</span><div class="case-select"><select id="whatsappType"><option value="">Todos los tipos</option></select></div></div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 7h6M9 11h6M9 15h2M12 17h3"/></svg>Dispositivo</span><div class="case-select"><select id="whatsappDevice"><option value="">Todos los dispositivos</option></select></div></div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="m8.5 12 2.25 2.25 4.75-5"/></svg>Estado</span><div class="case-select"><select id="whatsappStatus"><option value="">Todos los estados</option></select></div></div>
+            <div class="case-filter-control"><span class="case-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5c.4-3 2.25-4.5 5.5-4.5s5.1 1.5 5.5 4.5M16 5.25a3.25 3.25 0 0 1 0 6.5M17 15c2.1.35 3.3 1.85 3.5 4.5"/></svg>Responsable</span><div class="case-select"><select id="whatsappResponsible"><option value="">Todos los responsables</option></select></div></div>
+          </div>
+        </section>
+
+        <section class="case-results-card" aria-labelledby="whatsappResultsTitle">
+          <div class="case-view-switch" role="group" aria-label="Vista de solicitudes">
+            <button type="button" class="case-view-switch-button is-active" id="whatsappShowAllRequests" aria-pressed="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.4-4.5 2.5-6.5 5.5-6.5s5.1 2 5.5 6.5M16 5.5a3 3 0 1 1 0 6M17 14.5c2.1.4 3.4 1.8 3.5 4.5"/></svg>
+              Todas las solicitudes
+            </button>
+            <button type="button" class="case-view-switch-button" id="whatsappShowMyRequests" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"/><path d="M4.5 20c.5-4.1 3-6.2 7.5-6.2s7 2.1 7.5 6.2"/></svg>
+              Mis solicitudes
+            </button>
+          </div>
+          <div class="case-results-heading"><div><h2 id="whatsappResultsTitle">Resultados de solicitudes</h2><p id="whatsappResultSummary">0 resultados</p></div></div>
+          <div class="case-table-wrap"><table class="case-table whatsapp-table"><thead><tr><th>Fecha</th><th>Cliente</th><th>Tipo de solicitud</th><th>Dispositivo</th><th>Unidad / Económico</th><th>Responsable</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="whatsappTableBody"></tbody></table><div id="whatsappEmptyState" class="case-empty-state" hidden>No hay solicitudes que coincidan con los filtros seleccionados.</div></div>
+          <div class="case-pagination"><div class="case-page-size-label">Mostrar resultados por página<div class="case-select case-page-select"><select id="whatsappPageSize" aria-label="Mostrar resultados por página"><option value="10">10</option><option value="25">25</option><option value="50">50</option></select></div></div><div class="pagination-controls"><span id="whatsappPageSummary">Página 1 de 1</span><button type="button" id="whatsappPreviousPage" aria-label="Página anterior">‹</button><button type="button" id="whatsappNextPage" aria-label="Página siguiente">›</button></div></div>
+        </section>
+      </section>
+
+      <div class="new-case-backdrop" id="newCaseBackdrop" hidden></div>
+      <section class="new-case-modal" id="newCaseModal" role="dialog" aria-modal="true" aria-labelledby="newCaseTitle" aria-describedby="newCaseSubtitle" hidden tabindex="-1">
+        <header class="new-case-header">
+          <div class="new-case-heading">
+            <svg class="new-case-title-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v13h14V7a2 2 0 0 0-2-2h-2M9 5a3 3 0 0 1 6 0v2H9V5ZM9 12h6M9 16h6"/></svg>
+            <div><h2 id="newCaseTitle">Nuevo caso</h2><p id="newCaseSubtitle">Revisa toda la información antes de guardar.</p></div>
+          </div>
+          <button type="button" class="new-case-close" id="closeNewCase" aria-label="Cerrar formulario">×</button>
+        </header>
+
+        <form id="newCaseForm" novalidate>
+          <div class="new-case-body">
+            <div class="new-case-validation-summary" id="newCaseValidationSummary" role="alert" aria-live="polite" hidden></div>
+            <div class="new-case-fields">
+              <div class="new-case-field">
+                <label for="newCaseNumber">Número de caso Webfleet <span aria-hidden="true">*</span></label>
+                <input id="newCaseNumber" name="caseNumber" type="text" placeholder="Ej. WF-2026-1040" maxlength="60" required autocomplete="off">
+                <span class="new-case-field-error" id="newCaseNumberError" hidden></span>
+              </div>
+
+              <div class="new-case-field">
+                <label for="newCaseClient">Cliente <span aria-hidden="true">*</span></label>
+                <div class="case-create-search" data-options="clients">
+                  <input id="newCaseClient" name="client" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="newCaseClientOptions" placeholder="Selecciona un cliente" required autocomplete="off">
+                  <span class="case-create-chevron" aria-hidden="true"></span>
+                  <div class="case-create-listbox" id="newCaseClientOptions" role="listbox" aria-label="Clientes disponibles" hidden></div>
+                </div>
+                <span class="new-case-field-error" id="newCaseClientError" hidden></span>
+              </div>
+
+              <div class="new-case-field">
+                <label for="newCaseUnit">Unidad / Económico <span aria-hidden="true">*</span></label>
+                <input id="newCaseUnit" name="unit" type="text" placeholder="Ej. CE-041" maxlength="60" required autocomplete="off">
+                <span class="new-case-field-error" id="newCaseUnitError" hidden></span>
+              </div>
+
+              <div class="new-case-field">
+                <label for="newCaseDevice">Dispositivo <span aria-hidden="true">*</span></label>
+                <div class="case-create-search" data-options="devices">
+                  <input id="newCaseDevice" name="device" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="newCaseDeviceOptions" placeholder="Selecciona un dispositivo" required autocomplete="off">
+                  <span class="case-create-chevron" aria-hidden="true"></span>
+                  <div class="case-create-listbox" id="newCaseDeviceOptions" role="listbox" aria-label="Dispositivos disponibles" hidden></div>
+                </div>
+                <span class="new-case-field-error" id="newCaseDeviceError" hidden></span>
+              </div>
+
+              <div class="new-case-field">
+                <label for="newCaseReason">Motivo <span aria-hidden="true">*</span></label>
+                <div class="case-create-search" data-options="reasons">
+                  <input id="newCaseReason" name="reason" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="newCaseReasonOptions" placeholder="Selecciona un motivo" required autocomplete="off">
+                  <span class="case-create-chevron" aria-hidden="true"></span>
+                  <div class="case-create-listbox" id="newCaseReasonOptions" role="listbox" aria-label="Motivos disponibles" hidden></div>
+                </div>
+                <span class="new-case-field-error" id="newCaseReasonError" hidden></span>
+              </div>
+
+              <div class="new-case-field">
+                <label for="newCaseStatus">Estado <span aria-hidden="true">*</span></label>
+                <div class="new-case-status-wrap" data-status="Pendiente">
+                  <div class="case-select new-case-status-select">
+                    <select id="newCaseStatus" name="status" required aria-label="Estado">
+                      <option value="Pendiente">Pendiente</option>
+                      <option value="Segunda Línea">Segunda línea</option>
+                      <option value="Resuelto">Resuelto</option>
+                    </select>
+                  </div>
+                </div>
+                <span class="new-case-field-error" id="newCaseStatusError" hidden></span>
+              </div>
+            </div>
+
+            <div class="new-case-extras">
+              <div class="new-case-field new-case-description-field">
+                <label for="newCaseDescription">Descripción del caso <span aria-hidden="true">*</span></label>
+                <textarea id="newCaseDescription" name="description" maxlength="500" placeholder="Describe el problema o solicitud..." required></textarea>
+                <span class="new-case-field-error" id="newCaseDescriptionError" hidden></span>
+                <div class="new-case-counter" aria-live="polite"><span id="newCaseDescriptionCount">0</span> / 500</div>
+              </div>
+
+              <div class="new-case-field new-case-evidence-field">
+                <label>Evidencia (solo una imagen)</label>
+                <input id="newCaseEvidenceInput" class="visually-hidden-input" type="file" accept="image/png,image/jpeg,image/webp" aria-label="Seleccionar una imagen de evidencia">
+                <div class="new-case-dropzone" id="newCaseDropzone" role="group" aria-label="Área para agregar una imagen de evidencia">
+                  <svg class="new-case-image-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.4"/><path d="m5 17 4.5-4.5 3 3 2.5-2.5 4 4"/></svg>
+                  <span class="dropzone-instruction">Arrastra una imagen aquí o pega una captura</span>
+                  <strong>(Ctrl + V)</strong>
+                  <small>Formatos: PNG, JPG, WEBP. Tamaño máx. 5 MB</small>
+                  <button type="button" class="dropzone-select-file" id="selectNewCaseEvidence">Seleccionar imagen</button>
+                </div>
+                <div class="new-case-evidence-preview" id="newCaseEvidencePreview" hidden>
+                  <img id="newCaseEvidenceImage" alt="Vista previa de la evidencia">
+                  <div><span id="newCaseEvidenceName"></span><div class="evidence-actions"><button type="button" id="replaceNewCaseEvidence">Reemplazar</button><button type="button" id="removeNewCaseEvidence">Quitar</button></div></div>
+                </div>
+                <p class="new-case-evidence-error" id="newCaseEvidenceError" aria-live="polite" hidden></p>
+              </div>
+            </div>
+          </div>
+
+          <footer class="new-case-footer">
+            <div class="new-case-auto-info"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3-6 7.5-6s7 2 7.5 6"/></svg><span>Usuario: <strong id="newCaseSessionUser">—</strong><span class="auto-info-separator"> · </span>Fecha de registro: <strong id="newCaseSystemDate">—</strong> (automática)</span></div>
+            <div class="new-case-actions"><button type="button" class="button-secondary" id="cancelNewCase">Cancelar</button><button type="submit" class="button-primary" id="submitNewCase">Registrar caso</button></div>
+          </footer>
+        </form>
+      </section>
+
+      <div class="new-case-discard-backdrop" id="newCaseDiscardBackdrop" hidden></div>
+      <section class="new-case-discard-dialog" id="newCaseDiscardDialog" role="alertdialog" aria-modal="true" aria-labelledby="newCaseDiscardTitle" aria-describedby="newCaseDiscardMessage" hidden tabindex="-1">
+        <div class="new-case-discard-card">
+          <h2 id="newCaseDiscardTitle">¿Descartar los cambios?</h2>
+          <p id="newCaseDiscardMessage">Tienes información sin guardar. Si cierras el formulario, perderás los datos ingresados</p>
+          <div class="new-case-discard-actions">
+            <button type="button" class="button-secondary" id="keepEditingNewCase">Seguir editando</button>
+            <button type="button" class="button-primary" id="discardNewCaseChanges">Descartar cambios</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="case-detail-backdrop" id="caseDetailBackdrop" hidden></div>
+      <aside class="case-detail-panel" id="caseDetailPanel" aria-labelledby="caseDetailTitle" aria-modal="true" role="dialog" hidden>
+        <div class="case-detail-header">
+          <div><span class="detail-eyebrow">WEBFLEET</span><h2 id="caseDetailTitle">Detalle del caso</h2><div class="detail-case-id" id="detailCaseId"></div></div>
+          <button class="detail-close" type="button" id="closeCaseDetail" aria-label="Cerrar detalle">×</button>
+        </div>
+        <div class="case-detail-content" id="caseDetailContent"></div>
+      </aside>
+
+      <div class="case-delete-backdrop" id="caseDeleteBackdrop" hidden></div>
+      <section class="case-delete-dialog" id="caseDeleteDialog" role="alertdialog" aria-modal="true" aria-labelledby="caseDeleteTitle" aria-describedby="caseDeleteMessage" hidden tabindex="-1">
+        <div class="case-delete-card">
+          <h2 id="caseDeleteTitle">¿Eliminar caso?</h2>
+          <p id="caseDeleteMessage">Se eliminará el caso <strong id="caseDeleteNumber"></strong> de los datos de demostración.</p>
+          <div class="case-delete-actions"><button type="button" class="button-secondary" id="cancelDeleteCase">Cancelar</button><button type="button" class="button-danger" id="confirmDeleteCase">Eliminar caso</button></div>
+        </div>
+      </section>
+
+      <div class="new-case-backdrop" id="newWhatsAppBackdrop" hidden></div>
+      <section class="new-case-modal whatsapp-modal" id="newWhatsAppModal" role="dialog" aria-modal="true" aria-labelledby="newWhatsAppTitle" aria-describedby="newWhatsAppSubtitle" hidden tabindex="-1">
+        <header class="new-case-header"><div class="new-case-heading"><svg class="new-case-title-icon whatsapp-title-icon whatsapp-brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 11.65a8.25 8.25 0 0 1-12.15 7.3L3.75 20l1.08-4.1a8.25 8.25 0 1 1 15.42-4.25Z"/><path class="whatsapp-handset" transform="translate(12 12) scale(.76) translate(-10.7 -11.85)" d="M8.05 7.15c-.45-.42-1.1-.37-1.48.12l-.55.72c-.38.5-.47 1.12-.28 1.72.78 2.42 3.97 5.61 6.39 6.39.6.19 1.22.1 1.72-.28l.72-.55c.49-.38.54-1.03.12-1.48l-1.32-1.42a.98.98 0 0 0-1.4-.04l-.88.83a7.27 7.27 0 0 1-2.4-2.4l.83-.88a.98.98 0 0 0-.04-1.4L8.05 7.15Z"/></svg><div><h2 id="newWhatsAppTitle">Nueva solicitud</h2><p id="newWhatsAppSubtitle">Revisa toda la información antes de guardar.</p></div></div><button type="button" class="new-case-close" id="closeNewWhatsApp" aria-label="Cerrar formulario">×</button></header>
+        <form id="newWhatsAppForm" novalidate>
+          <div class="new-case-body"><div class="new-case-validation-summary" id="whatsappValidationSummary" role="alert" aria-live="polite" hidden></div>
+            <div class="new-case-fields">
+              <div class="new-case-field"><label for="newWhatsAppClient">Cliente <span aria-hidden="true">*</span></label><div class="case-select"><select id="newWhatsAppClient" required><option value="">Selecciona un cliente</option></select></div><span class="new-case-field-error" id="newWhatsAppClientError" hidden></span></div>
+              <div class="new-case-field"><label for="newWhatsAppType">Tipo de solicitud <span aria-hidden="true">*</span></label><div class="case-select"><select id="newWhatsAppType" required><option value="">Selecciona un tipo</option></select></div><span class="new-case-field-error" id="newWhatsAppTypeError" hidden></span></div>
+              <div class="new-case-field"><label for="newWhatsAppUnit">Unidad / Económico <span aria-hidden="true">*</span></label><input id="newWhatsAppUnit" type="text" maxlength="60" placeholder="Escribe la unidad o económico" required autocomplete="off"><span class="new-case-field-error" id="newWhatsAppUnitError" hidden></span></div>
+              <div class="new-case-field"><label for="newWhatsAppDevice">Dispositivo</label><div class="case-select"><select id="newWhatsAppDevice"><option value="">Sin dispositivo específico</option></select></div></div>
+              <div class="new-case-field"><label for="newWhatsAppStatus">Estado <span aria-hidden="true">*</span></label><div class="whatsapp-status-wrap" data-status="Pendiente"><div class="case-select whatsapp-status-select"><select id="newWhatsAppStatus" required aria-label="Estado"><option value="Pendiente">Pendiente</option><option value="Resuelto">Resuelto</option><option value="Escalado a Freshservice">Escalado a Freshservice</option></select></div></div><span class="new-case-field-error" id="newWhatsAppStatusError" hidden></span></div>
+            </div>
+            <div class="new-case-extras"><div class="new-case-field new-case-description-field"><label for="newWhatsAppDescription">Descripción <span aria-hidden="true">*</span></label><textarea id="newWhatsAppDescription" maxlength="100" placeholder="Explica qué se solicita o qué ha ocurrido..." required></textarea><span class="new-case-field-error" id="newWhatsAppDescriptionError" hidden></span><div class="new-case-counter"><span id="newWhatsAppDescriptionCount">0</span> / 100</div></div></div>
+          </div>
+          <footer class="new-case-footer"><div class="new-case-auto-info"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3-6 7.5-6s7 2 7.5 6"/></svg><span>Usuario: <strong id="whatsappCreatorName">—</strong><span class="auto-info-separator"> · </span>Fecha de registro: <strong id="whatsappSystemDate">—</strong> (automática)</span></div><div class="new-case-actions"><button type="button" class="button-secondary" id="cancelNewWhatsApp">Cancelar</button><button type="submit" class="button-primary" id="submitNewWhatsApp">Registrar solicitud</button></div></footer>
+        </form>
+      </section>
+
+      <div class="new-case-discard-backdrop" id="whatsappDiscardBackdrop" hidden></div>
+      <section class="new-case-discard-dialog" id="whatsappDiscardDialog" role="alertdialog" aria-modal="true" aria-labelledby="whatsappDiscardTitle" aria-describedby="whatsappDiscardMessage" hidden tabindex="-1">
+        <div class="new-case-discard-card">
+          <h2 id="whatsappDiscardTitle">¿Descartar los cambios?</h2>
+          <p id="whatsappDiscardMessage">Tienes información sin guardar. Si cierras el formulario, perderás los datos ingresados.</p>
+          <div class="new-case-discard-actions">
+            <button type="button" class="button-secondary" id="keepEditingWhatsApp">Seguir editando</button>
+            <button type="button" class="button-primary" id="discardWhatsAppChanges">Descartar cambios</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="case-detail-backdrop" id="whatsappDetailBackdrop" hidden></div>
+      <aside class="case-detail-panel whatsapp-detail-panel" id="whatsappDetailPanel" aria-labelledby="whatsappDetailTitle" aria-modal="true" role="dialog" hidden><div class="case-detail-header"><div><span class="detail-eyebrow">WHATSAPP</span><h2 id="whatsappDetailTitle">Detalle de la solicitud</h2></div><button class="detail-close" type="button" id="closeWhatsAppDetail" aria-label="Cerrar detalle">×</button></div><div class="case-detail-content" id="whatsappDetailContent"></div></aside>
+
+
+
+    <footer class="portal-footer">© <span id="currentYear"></span> Portal SAC. Todos los derechos reservados.</footer>
+
+    </main>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONEXIÓN CON APPS SCRIPT
+===================================================== -->
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
